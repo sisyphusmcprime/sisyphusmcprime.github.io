@@ -10,19 +10,22 @@
         <title>sisyphusmcprime - GitHub Profile README</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <img class="container" id="profile" src="https://github.com/sisyphusmcprime.png"> <!--- We set padding to 0 because the padding makes the image sit too far in the box.-->
+
+        <div id="header-bar">
+            <img class="container" id="profile" src="https://github.com/sisyphusmcprime.png">
+            <canvas class="container matrix" id="canvas">Canvas is not supported.</canvas>
+        </div>
 
         <div class="container">
-            <div id="title">yo, wsg twin</div>
+            <h1>yo, wsg twin</h1>
 
-            <div id="desc">
+            <div>
                 <p>i'm a guy who does stuff on linux and codes sometimes</p>
 
                 <p>i have experience in:</p>
@@ -60,10 +63,8 @@
 
                 <p>my unc also works at nintendo (dont ask bro)</p>
             </div>
-
         </div>
 
-
-        <script src="" async defer></script>
+        <script src="matrix.js" defer></script>
     </body>
 </html>
