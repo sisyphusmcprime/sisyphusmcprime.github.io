@@ -23,18 +23,16 @@ $container-padding: 5px 16px;
     align-items: center;
     justify-content: flex-start;
 
-    max-width: 60vw;
-    height: fit-content;
     margin: 20px 0;
-}
-
-#center-wrapper > * {
-    width: 100%;
-
+    padding: 0 1rem; // Bootstrap gutter
     box-sizing: border-box;
 }
 
-#header-bar {
+#center-wrapper > * {
+    box-sizing: border-box;
+}
+
+#banner {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -42,9 +40,6 @@ $container-padding: 5px 16px;
     max-height: fit-content;
 }
 
-#header-bar > * {
-    min-width: 0;
-}
 
 #profile {
     flex: 1;
@@ -61,18 +56,18 @@ $container-padding: 5px 16px;
     background-color: transparent;
 }
 
-.container {
+.custom-container {
     border-color: $color-accent;
     border-width: 2.4px;
     border-style: solid;
-
 
     padding: $container-padding;
     margin: 8px;
 
     max-height: fit-content;
-    max-width: 100%;
     box-sizing: border-box;
+    // Width handled by Bootstrap container classes (.container, .container-md, .container-lg, etc.)
+    // Use breakpoint classes in HTML for responsive sizing
 }
 
 .desc {
