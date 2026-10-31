@@ -25,12 +25,12 @@ window.addEventListener('DOMContentLoaded', function() {
       // Matrix font color — read from CSS variable --matrix-color (try canvas, then root)
       matrixColor = getComputedStyle( canvas ).getPropertyValue( '--matrix-color' ).trim()
           || getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-color' ).trim()
-          || '#FF6D1F',
+          || '#B17457',
 
       // Matrix background color + alpha — read from CSS variables
       matrixBgColor = getComputedStyle( canvas ).getPropertyValue( '--matrix-bg-color' ).trim()
           || getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-bg-color' ).trim()
-          || '#222222',
+          || '#FAF7F0',
       matrixBgAlpha = parseFloat( getComputedStyle( canvas ).getPropertyValue( '--matrix-bg-alpha' ) )
           || parseFloat( getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-bg-alpha' ) )
           || 0.15,
