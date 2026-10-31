@@ -1,0 +1,52 @@
+@use "page.scss" as pg;
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 100vw;
+    height: 100vh;
+}
+
+#header-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+#header-bar > * {
+    min-width: 0;
+}
+
+#profile {
+    flex: 1;
+    padding: 4px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    border: none; 
+    margin: 0;
+}
+
+#canvas {
+    flex: 2;
+    padding: 4px;
+    display: block;
+    background-color: transparent;
+    --matrix-color: #{pg.$color-accent};
+    --matrix-bg-color: #{pg.$color-bg};
+    --matrix-bg-alpha: #{pg.$matrix-bg-alpha};
+}
