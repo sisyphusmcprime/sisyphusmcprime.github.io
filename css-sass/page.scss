@@ -1,0 +1,125 @@
+/* Color variables */
+$color-bg: #222222;
+$color-link-bg: #2373F4;
+$color-link-text: #F2F7A0;
+$color-accent: #FF6D1F;
+$color-text-light: #E2E8CE;
+
+$highlight-padding: 4px 6px;
+$highlight-link-padding: 2px 3.2px;
+$highlight-spacing: 2.4px;
+
+/* Custom */
+.center_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 60vw;
+    height: fit-content;
+    margin: 20px 0;
+}
+
+.center_wrapper > * {
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.container {
+    border-color: $color-accent;
+    border-width: 2.4px;
+    border-style: solid;
+
+
+    padding: 16px;
+    margin: 8px;
+
+    max-height: fit-content;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.desc {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Elements */
+
+body {
+    background-color: $color-bg;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: 100vh;
+    padding: 8px;
+    width: 100%;
+
+    font-family: monospace;
+}
+
+/* Links */
+a {
+    background-color: $color-link-bg;
+    color: $color-link-text;
+
+    padding: $highlight-link-padding;
+}
+
+/* Lists */
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    @extend .desc;
+
+    background-color: $color-accent;
+    color: $color-bg;
+
+    margin: $highlight-spacing 0;
+    padding: $highlight-padding;
+
+    font-size: 13px;
+    
+}
+
+/* Headers/Paras */
+h1 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    color: $color-accent;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: $color-accent;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: $color-text-light;
+}
+
+p {
+    @extend .desc;
+
+    color: $color-text-light;
+}
+

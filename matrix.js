@@ -6,9 +6,15 @@ window.addEventListener('DOMContentLoaded', function() {
   var canvas = document.getElementById( 'canvas' ),
       ctx = canvas.getContext( '2d' ),
 
-      // Canvas dimensions (kept small to fit inside .container)
-      cw = 545,
-      ch = 300,
+      // Canvas dimensions — read from the computed CSS size (set in index.css)
+      // so the canvas size is decided by stylesheet, not this file.
+      cw = parseFloat( window.getComputedStyle( canvas ).width ),
+      ch = parseFloat( window.getComputedStyle( canvas ).height ),
+
+      // Scale the internal bitmap for crisp rendering on high-DPI screens.
+      // The visible CSS size (cw x ch) stays unchanged; only the buffer resolution
+      // and the context transform are scaled, so drawing stays in CSS pixels.
+      dpr = window.devicePixelRatio || 1,
 
       // Pool of characters that fall down the screen
       charArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
@@ -17,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function() {
       fallingCharArr = [],
 
       // Size of each character in pixels
-      fontSize = 20,
+      fontSize = 16,
 
       // How many columns of characters fit across the canvas width
       maxColums = cw/(fontSize),
@@ -25,9 +31,11 @@ window.addEventListener('DOMContentLoaded', function() {
       // Delay between frames in milliseconds (higher = slower animation)
       frameDelay = 25;
 
-  // Set the canvas internal buffer size (must match CSS display size to avoid stretching)
-  canvas.width = cw;
-  canvas.height = ch;
+  // Set the canvas internal buffer size (scaled by devicePixelRatio for crispness,
+  // but CSS display size stays cw x ch so nothing looks stretched or zoomed).
+  canvas.width = cw * dpr;
+  canvas.height = ch * dpr;
+  ctx.scale(dpr, dpr);
 
 
   // Returns a random integer between min (inclusive) and max (exclusive)
