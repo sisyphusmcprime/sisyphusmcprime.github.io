@@ -11,7 +11,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="../../css/page.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/page.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -20,17 +21,17 @@
 
         <div id="center-wrapper">
             <div id="header-bar">
-                <div class="container">
+                <div class="container container-sm">
 
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container container-lg">
                 <div id="MD_BLOG"></div>
 
                 <script>
                     window.addEventListener('init:loaded', function() {
-                        window.markdownLoader.loadMarkdown('/test-markdown/sample.md', '#MD_BLOG').then(html => {
+                        window.markdownLoader.loadMarkdown('https://cdn.jsdelivr.net/gh/sisyphusmcprime/sisyphusmcprime.github.io-posts@latest/beamng-agentic/01-controlling_car/01-controlling_car.md', '#MD_BLOG').then(html => {
                             console.log('Markdown converted:', html.length, 'chars');
                         }).catch(err => {
                             console.error('Markdown load failed:', err);
@@ -40,6 +41,7 @@
             </div>
         </div>
         
+        <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/js/init.js" async defer></script>
     </body>
 </html>
