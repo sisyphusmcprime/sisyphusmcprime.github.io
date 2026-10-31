@@ -22,6 +22,20 @@ window.addEventListener('DOMContentLoaded', function() {
       // Array holding all the falling character objects
       fallingCharArr = [],
 
+      // Matrix font color — read from CSS variable --matrix-color (try canvas, then root)
+      matrixColor = getComputedStyle( canvas ).getPropertyValue( '--matrix-color' ).trim()
+          || getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-color' ).trim()
+          || '#FF6D1F',
+
+      // Matrix background color + alpha — read from CSS variables
+      matrixBgColor = getComputedStyle( canvas ).getPropertyValue( '--matrix-bg-color' ).trim()
+          || getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-bg-color' ).trim()
+          || '#222222',
+      matrixBgAlpha = parseFloat( getComputedStyle( canvas ).getPropertyValue( '--matrix-bg-alpha' ) )
+          || parseFloat( getComputedStyle( document.documentElement ).getPropertyValue( '--matrix-bg-alpha' ) )
+          || 0.15,
+      matrixBg = 'rgba(' + parseInt(matrixBgColor.slice(1,3),16) + ',' + parseInt(matrixBgColor.slice(3,5),16) + ',' + parseInt(matrixBgColor.slice(5,7),16) + ',' + matrixBgAlpha + ')',
+
       // Size of each character in pixels
       fontSize = 16,
 
@@ -69,8 +83,8 @@ window.addEventListener('DOMContentLoaded', function() {
     // Assign a random fall speed
     this.speed = randomFloat(1,5);
 
-    // Set fill color to orange (#F2613F) and font: bold Terminus (falls back to monospace)
-    ctx.fillStyle = "#FF6D1F";
+    // Set fill color to the CSS variable --matrix-color and font: bold Terminus (falls back to monospace)
+    ctx.fillStyle = matrixColor;
     ctx.font = "bold " + fontSize + "px 'Terminus', monospace";
 
     // Draw the character at its current (x, y) position
@@ -97,9 +111,9 @@ window.addEventListener('DOMContentLoaded', function() {
   // Main animation loop (async so we can use await sleep)
   async function update()
   {
-    // Paint a semi-transparent black rectangle over the whole canvas each frame.
-    // Low alpha creates the fading "trail" effect behind falling characters.
-    ctx.fillStyle = "#22222224";
+    // Paint a rectangle over the whole canvas each frame using --matrix-bg-color with --matrix-bg-alpha transparency.
+    // This creates the fading "trail" effect behind falling characters while keeping the canvas color controllable via CSS.
+    ctx.fillStyle = matrixBg;
     ctx.fillRect(0,0,cw,ch);
 
     // Draw and advance every falling character

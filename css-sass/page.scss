@@ -1,13 +1,18 @@
 /* Color variables */
-$color-bg: #222222;
-$color-link-bg: #2373F4;
-$color-link-text: #F2F7A0;
-$color-accent: #FF6D1F;
-$color-text-light: #E2E8CE;
+$color-bg: #FAF7F0;
+$color-link-bg: #4A4947;
+$color-link-text: #D8D2C2;
+$color-accent: #B17457;
+$matrix-bg-alpha: 0.15;
+$color-text-light: #4A4947;
+
+$header-margin: 10px 0;
 
 $highlight-padding: 4px 6px;
 $highlight-link-padding: 2px 3.2px;
 $highlight-spacing: 2.4px;
+
+$container-padding: 5px 16px;
 
 /* Custom */
 .center_wrapper {
@@ -33,7 +38,7 @@ $highlight-spacing: 2.4px;
     border-style: solid;
 
 
-    padding: 16px;
+    padding: $container-padding;
     margin: 8px;
 
     max-height: fit-content;
@@ -83,12 +88,12 @@ li {
     padding: $highlight-padding;
 
     font-size: 13px;
-    
+    font-weight: 525;
 }
 
 /* Headers/Paras */
 h1 {
-    margin: 0;
+    margin: $header-margin;
     padding: 0;
 
     font-size: 40px;
@@ -98,7 +103,7 @@ h1 {
 }
 
 h2 {
-    margin: 0;
+    margin: $header-margin;
     padding: 0;
 
     font-size: 28px;
@@ -108,7 +113,7 @@ h2 {
 }
 
 h3 {
-    margin: 0;
+    margin: $header-margin;
     padding: 0;
 
     font-size: 16px;
