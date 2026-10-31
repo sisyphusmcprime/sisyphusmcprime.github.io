@@ -45,8 +45,10 @@ body {
 /* Links */
 a {
   background-color: #4A4947;
-  color: #D8D2C2;
+  color: #FAF7F0;
   padding: 2px 3.2px;
+  font-size: 13px;
+  font-weight: 525;
 }
 
 /* Lists */
@@ -93,6 +95,10 @@ p {
   color: #4A4947;
 }
 
+hr {
+  color: #D8D2C2;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -120,6 +126,16 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  border: none;
+  margin: 0;
 }
 
 #canvas {

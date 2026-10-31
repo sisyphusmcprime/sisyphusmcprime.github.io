@@ -45,8 +45,10 @@ body {
 /* Links */
 a {
   background-color: #4A4947;
-  color: #D8D2C2;
+  color: #FAF7F0;
   padding: 2px 3.2px;
+  font-size: 13px;
+  font-weight: 525;
 }
 
 /* Lists */
@@ -91,4 +93,8 @@ h3 {
 
 p {
   color: #4A4947;
+}
+
+hr {
+  color: #D8D2C2;
 }

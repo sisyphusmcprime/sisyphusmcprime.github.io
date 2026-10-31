@@ -30,6 +30,17 @@ body {
     display: block;
 }
 
+#links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    border: none; 
+    margin: 0;
+}
+
 #canvas {
     flex: 2;
     padding: 4px;

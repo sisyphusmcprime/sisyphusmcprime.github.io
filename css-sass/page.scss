@@ -1,8 +1,9 @@
 /* Color variables */
 $color-bg: #FAF7F0;
 $color-link-bg: #4A4947;
-$color-link-text: #D8D2C2;
+$color-link-text: #FAF7F0;
 $color-accent: #B17457;
+$color-accent-2: #D8D2C2;
 $matrix-bg-alpha: 0.15;
 $color-text-light: #4A4947;
 
@@ -70,6 +71,9 @@ a {
     color: $color-link-text;
 
     padding: $highlight-link-padding;
+
+    font-size: 13px;
+    font-weight: 525;
 }
 
 /* Lists */
@@ -126,5 +130,9 @@ p {
     @extend .desc;
 
     color: $color-text-light;
+}
+
+hr {
+    color: $color-accent-2
 }
 
