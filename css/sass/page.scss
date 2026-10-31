@@ -12,11 +12,12 @@ $header-margin: 10px 0;
 $highlight-padding: 4px 6px;
 $highlight-link-padding: 2px 3.2px;
 $highlight-spacing: 2.4px;
+$highlight-off: 20px;
 
 $container-padding: 5px 16px;
 
 /* Custom */
-.center_wrapper {
+#center-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,10 +28,21 @@ $container-padding: 5px 16px;
     margin: 20px 0;
 }
 
-.center_wrapper > * {
+#center-wrapper > * {
     width: 100%;
 
     box-sizing: border-box;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-bar > * {
+    min-width: 0;
 }
 
 .container {
@@ -43,7 +55,7 @@ $container-padding: 5px 16px;
     margin: 8px;
 
     max-height: fit-content;
-    width: auto;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -58,11 +70,18 @@ body {
     background-color: $color-bg;
     box-sizing: border-box;
     margin: 0;
-    min-height: 100vh;
     padding: 8px;
-    width: 100%;
 
     font-family: monospace;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 100vw;
+    height: 100vh;
+
 }
 
 /* Links */
@@ -88,7 +107,7 @@ li {
     background-color: $color-accent;
     color: $color-bg;
 
-    margin: $highlight-spacing 0;
+    margin: $highlight-spacing $highlight-off;
     padding: $highlight-padding;
 
     font-size: 13px;

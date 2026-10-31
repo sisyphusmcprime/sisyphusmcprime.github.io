@@ -1,6 +1,6 @@
 /* Color variables */
 /* Custom */
-.center_wrapper {
+.center-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
   margin: 20px 0;
 }
 
-.center_wrapper > * {
+.center-wrapper > * {
   width: 100%;
   box-sizing: border-box;
 }
@@ -22,7 +22,7 @@
   padding: 5px 16px;
   margin: 8px;
   max-height: fit-content;
-  width: auto;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -36,10 +36,14 @@ body {
   background-color: #FAF7F0;
   box-sizing: border-box;
   margin: 0;
-  min-height: 100vh;
   padding: 8px;
-  width: 100%;
   font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
 }
 
 /* Links */
@@ -60,7 +64,7 @@ ul {
 li {
   background-color: #B17457;
   color: #FAF7F0;
-  margin: 2.4px 0;
+  margin: 2.4px 20px;
   padding: 4px 6px;
   font-size: 13px;
   font-weight: 525;

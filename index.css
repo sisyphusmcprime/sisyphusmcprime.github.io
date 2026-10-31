@@ -1,6 +1,6 @@
 /* Color variables */
 /* Custom */
-.center_wrapper {
+.center-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,7 @@
   margin: 20px 0;
 }
 
-.center_wrapper > * {
+.center-wrapper > * {
   width: 100%;
   box-sizing: border-box;
 }

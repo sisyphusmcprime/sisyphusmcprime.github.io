@@ -10,15 +10,36 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../page.css">
+        
+        <link rel="stylesheet" href="../../css/page.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        Hello World!
 
-        <script src="" async defer></script>
+        <div id="center-wrapper">
+            <div class="header-bar">
+                <div class="container">
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div id="MD_BLOG"></div>
+
+                <script>
+                    window.addEventListener('init:loaded', function() {
+                        window.markdownLoader.loadMarkdown('/test-markdown/sample.md', '#MD_BLOG').then(html => {
+                            console.log('Markdown converted:', html.length, 'chars');
+                        }).catch(err => {
+                            console.error('Markdown load failed:', err);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        
+        <script src="/js/init.js" async defer></script>
     </body>
 </html>

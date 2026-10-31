@@ -20,5 +20,8 @@
   "homepage": "https://github.com/sisyphusmcprime/sisyphusmcprime.github.io#readme",
   "devDependencies": {
     "sass": "^1.107.0"
+  },
+  "dependencies": {
+    "marked": "^18.1.2"
   }
 }

@@ -1,25 +1,6 @@
 @use "page.scss" as pg;
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    
-    width: 100vw;
-    height: 100vh;
-}
 
-#header-bar {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    overflow: hidden;
-}
-
-#header-bar > * {
-    min-width: 0;
-}
 
 #profile {
     flex: 1;
@@ -49,4 +30,13 @@ body {
     --matrix-color: #{pg.$color-accent};
     --matrix-bg-color: #{pg.$color-bg};
     --matrix-bg-alpha: #{pg.$matrix-bg-alpha};
+}
+
+#footnote {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
