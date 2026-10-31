@@ -1,12 +1,13 @@
 @use "page.scss" as pg;
 
-
+#header-bar > * {
+    min-width: 0;
+}
 
 #profile {
     flex: 1;
     padding: 4px;
-    width: 100%;
-    height: auto;
+    aspect-ratio: 1;
     object-fit: cover;
     display: block;
 }

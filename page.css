@@ -98,3 +98,30 @@ p {
 hr {
   color: #D8D2C2;
 }
+
+#header-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+#profile {
+  flex: 1;
+  padding: 4px;
+  aspect-ratio: 1;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#canvas {
+  flex: 2;
+  padding: 4px;
+  display: block;
+  background-color: transparent;
+  --matrix-color: #B17457;
+  --matrix-bg-color: #FAF7F0;
+  --matrix-bg-alpha: 0.15;
+}

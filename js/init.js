@@ -3,9 +3,9 @@
 // referenced directly in the HTML, from any page on the site.
 (function() {
   var jsFiles = [
-    '/js/marked.js',
+    '/js/blog/marked.js',
     '/js/home/matrix.js',
-    '/js/markdown-loader.js',
+    '/js/blog/markdown-loader.js',
     // Add more files here as you create them under js/
   ];
 

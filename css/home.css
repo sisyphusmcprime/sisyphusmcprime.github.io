@@ -1,18 +1,45 @@
 /* Color variables */
 /* Custom */
-.center-wrapper {
+#center-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 60vw;
+  max-width: 60vw;
   height: fit-content;
   margin: 20px 0;
 }
 
-.center-wrapper > * {
+#center-wrapper > * {
   width: 100%;
   box-sizing: border-box;
+}
+
+#header-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  max-height: fit-content;
+}
+
+#header-bar > * {
+  min-width: 0;
+}
+
+#profile {
+  flex: 1;
+  padding: 4px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+#canvas {
+  flex: 2;
+  padding: 4px;
+  display: block;
+  background-color: transparent;
 }
 
 .container {
@@ -103,13 +130,6 @@ hr {
   color: #D8D2C2;
 }
 
-#header-bar {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  overflow: hidden;
-}
-
 #header-bar > * {
   min-width: 0;
 }
@@ -117,8 +137,7 @@ hr {
 #profile {
   flex: 1;
   padding: 4px;
-  width: 100%;
-  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
   display: block;
 }
