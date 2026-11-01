@@ -1,14 +1,28 @@
 @use "page.scss" as pg;
 
+#header-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+#header-bar > * {
+    min-width: 0;
+}
+
 #profile {
-    padding: 4px;
+    flex: 1;
+    height: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     display: block;
 }
 
 #canvas {
-    padding: 4px;
+    flex: 2;
+    height: 100%;
     display: block;
     background-color: transparent;
     --matrix-color: #{pg.$color-accent};

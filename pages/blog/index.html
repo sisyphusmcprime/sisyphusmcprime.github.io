@@ -12,23 +12,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/page.css">
+        <link rel="stylesheet" href="/css/blog.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="center-wrapper">
-            <div id="header-bar">
-                <div class="container container-sm">
-
+        <div class="sm:container">
+            <div class="row">
+                <div class="col p-0 d-flex align-items-center justify-content-center">
+                    <img id="banner" class="custom-container w-100" src="/src/img/placeholder-banner.jpg">
                 </div>
             </div>
 
-            <div class="container container-lg">
-                <div id="MD_BLOG"></div>
-
+            <div class="row">
+                <!--- Loading in MD -->
                 <script>
                     window.addEventListener('init:loaded', function() {
                         window.markdownLoader.loadMarkdown('https://cdn.jsdelivr.net/gh/sisyphusmcprime/sisyphusmcprime.github.io-posts@latest/beamng-agentic/01-controlling_car/01-controlling_car.md', '#MD_BLOG').then(html => {
@@ -38,6 +37,8 @@
                         });
                     });1
                 </script>
+                <div class="col custom-container" id="MD_BLOG"></div>
+
             </div>
         </div>
         
