@@ -1,0 +1,12 @@
+/* Color variables */
+/* Elements */
+body {
+  background-color: #FAF7F0;
+  color: #4A4947;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 8px;
+  font-family: monospace;
+  width: 100vw;
+  height: 100vh;
+}

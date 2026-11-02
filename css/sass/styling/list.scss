@@ -1,0 +1,48 @@
+@use "utilities" as ut;
+
+/* Lists */
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: ordered-count;
+}
+
+li {
+    background-color: ut.$color-accent;
+    color: ut.$color-bg-light;
+
+    margin: ut.$highlight-spacing ut.$highlight-off;
+    padding: ut.$highlight-padding;
+
+    font-size: 13px;
+
+    counter-increment: ordered-count;
+}
+
+/* Custom Markers */
+
+ol > li::before {
+    content: counter(ordered-count);
+
+    padding: ut.$highlight-padding;
+
+    position: relative;
+    right: 10px;
+
+}
+
+ol > li.marker-white::before {
+    background-color: ut.$color-bg-dark;
+    color: ut.$color-text-light;
+
+}
+
+ol > li.marker-brown::before {
+    background-color: ut.$color-accent;
+    color: ut.$color-text-light;
+}

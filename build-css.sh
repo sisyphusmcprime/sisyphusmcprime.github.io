@@ -15,7 +15,8 @@ set -euo pipefail
 SCSS_SRC="css/sass"
 CSS_OUT="css"
 
-npx --package sass sass "$SCSS_SRC":"$CSS_OUT" --style expanded --no-source-map
+rm -rf css/*.css
 
+npx --package sass sass "$SCSS_SRC":"$CSS_OUT" --style expanded --no-source-map
 
 echo "Done."

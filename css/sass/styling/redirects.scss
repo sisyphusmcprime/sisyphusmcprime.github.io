@@ -1,0 +1,12 @@
+@use "utilities" as ut;
+
+/* Links */
+a {
+    background-color: ut.$color-bg-light;
+    color: ut.$color-text-dark;
+
+    padding: ut.$highlight-link-padding;
+
+    font-size: 13px;
+    font-weight: 525;
+}

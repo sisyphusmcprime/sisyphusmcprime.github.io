@@ -1,0 +1,18 @@
+@use "utilities" as ut;
+
+.container { /* the container that wraps EVERYTHING */
+    border: ut.$border-config;
+
+    padding: ut.$container-padding;
+    margin: 8px 0;
+
+    max-height: fit-content;
+}
+
+img.container {
+    padding: ut.$container-padding;
+}
+
+canvas.container {
+    padding: ut.$container-padding;
+}

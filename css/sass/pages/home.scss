@@ -1,0 +1,15 @@
+@use "../styling/src.scss" as src;
+
+#profile {
+    padding: 4px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+#canvas {
+    padding: 4px;
+    background-color: transparent;
+    --matrix-color: #{src.$color-accent};
+    --matrix-bg-color: #{src.$color-bg-light};
+    --matrix-bg-alpha: #{src.$matrix-bg-alpha};
+}

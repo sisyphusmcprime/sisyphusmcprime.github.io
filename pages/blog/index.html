@@ -10,39 +10,49 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/blog.css">
+
+        <link rel="stylesheet" href="/css/pages/blog.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <div class="sm:container">
             <div class="row">
-                <div class="col p-0 d-flex align-items-center justify-content-center">
-                    <img id="banner" class="custom-container w-100" src="/src/img/placeholder-banner.jpg">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item form-field">
+                                <a class="breadcrumb-link" href="/pages/home/index.html">Home</a>
+                            </li>
+                            <li class="breadcrumb-divider">/</li>
+                            <li class="breadcrumb-item form-field">
+                                <select>
+                                    <option>Choose one…</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </li>
+                            <li class="breadcrumb-divider">/</li>
+                            <li class="breadcrumb-item">
+                                <select>
+                                    <option>Choose one…</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col align-items-center">
+                    <div class="marker" style="display: inline-block;">⌕</div>
+                    <input type="text" style="display: inline-block;" placeholder="Search for...">
                 </div>
             </div>
-
-            <div class="row">
-                <!--- Loading in MD -->
-                <script>
-                    window.addEventListener('init:loaded', function() {
-                        window.markdownLoader.loadMarkdown('https://cdn.jsdelivr.net/gh/sisyphusmcprime/sisyphusmcprime.github.io-posts@latest/beamng-agentic/01-controlling_car/01-controlling_car.md', '#MD_BLOG').then(html => {
-                            console.log('Markdown converted:', html.length, 'chars');
-                        }).catch(err => {
-                            console.error('Markdown load failed:', err);
-                        });
-                    });1
-                </script>
-                <div class="col custom-container" id="MD_BLOG"></div>
-
-            </div>
         </div>
-        
-        <script src="/js/bootstrap.bundle.min.js"></script>
-        <script src="/js/init.js" async defer></script>
+
+        <script src="" async defer></script>
     </body>
 </html>

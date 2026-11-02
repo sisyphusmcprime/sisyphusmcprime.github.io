@@ -1,0 +1,34 @@
+/* Color variables */
+$color-bg-light: #FAF7F0;
+$color-bg-dark: #D8D2C2;
+
+$color-text-light: #FAF7F0;
+$color-text-dark: #4A4947;
+
+$color-accent: #B17457;
+
+$matrix-bg-alpha: 0.15;
+
+$header-margin: 10px 0;
+
+$highlight-padding: 4px 6px;
+$highlight-link-padding: 2px 3.2px;
+
+$highlight-spacing: 2.4px;
+$highlight-off: 20px;
+
+$container-padding: 5px 16px;
+$border-config: 2.4px solid $color-bg-dark;
+
+/* Elements */
+
+body {
+    background-color: $color-bg-light;
+    color: $color-text-dark;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 8px;
+
+    font-family: monospace;
+}
+

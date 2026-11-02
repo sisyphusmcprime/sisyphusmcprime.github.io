@@ -1,0 +1,10 @@
+body {
+    display: grid;
+    grid-template-rows: [url-start] 5% [banner-start] 15% [text-start] auto;
+    grid-template-columns: [];
+
+    width: 100vw;
+    height: 100vh;
+
+}
+

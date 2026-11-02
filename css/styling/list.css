@@ -1,0 +1,51 @@
+/* Color variables */
+/* Elements */
+body {
+  background-color: #FAF7F0;
+  color: #4A4947;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px 8px;
+  font-family: monospace;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Lists */
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: ordered-count;
+}
+
+li {
+  background-color: #B17457;
+  color: #FAF7F0;
+  margin: 2.4px 20px;
+  padding: 4px 6px;
+  font-size: 13px;
+  counter-increment: ordered-count;
+}
+
+/* Custom Markers */
+ol > li::before {
+  content: counter(ordered-count);
+  padding: 4px 6px;
+  position: relative;
+  right: 10px;
+}
+
+ol > li.marker-white::before {
+  background-color: #D8D2C2;
+  color: #FAF7F0;
+}
+
+ol > li.marker-brown::before {
+  background-color: #B17457;
+  color: #FAF7F0;
+}
