@@ -1,0 +1,25 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.body-container-grid {
+  display: grid;
+  grid-template-rows: [url] 5% [banner] 20% [desc] auto;
+  width: 50vw;
+  height: 100vh;
+}
+
+.pfp {
+  grid-area: pfp;
+}
+
+.mat {
+  grid-area: mat;
+}
+
+.desc {
+  grid-area: desc;
+}

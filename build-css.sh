@@ -17,6 +17,6 @@ CSS_OUT="css"
 
 rm -rf css/*.css
 
-npx --package sass sass "$SCSS_SRC":"$CSS_OUT" --style expanded --no-source-map
+npx --package sass sass --watch "$SCSS_SRC":"$CSS_OUT" --style expanded --no-source-map
 
 echo "Done."

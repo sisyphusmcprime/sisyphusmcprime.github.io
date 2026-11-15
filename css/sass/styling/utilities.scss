@@ -21,14 +21,27 @@ $container-padding: 5px 16px;
 $border-config: 2.4px solid $color-bg-dark;
 
 /* Elements */
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 body {
     background-color: $color-bg-light;
     color: $color-text-dark;
     box-sizing: border-box;
-    margin: 0;
     padding: 20px 8px;
 
     font-family: monospace;
+
+    width: 25vw;
+    height: 100vh;
+
+}
+
+body > * {
+    margin: 0;
 }
 

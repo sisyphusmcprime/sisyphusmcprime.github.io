@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.body-container-grid {
+  display: grid;
+  grid-template-areas: "url url url url url url" "pfp pfp mat mat mat mat" "desc desc desc desc desc desc";
+  width: 50vw;
+  height: 100vh;
+}
+
+.url {
+  grid-area: url;
+}
+
+.pfp {
+  grid-area: pfp;
+}
+
+.mat {
+  grid-area: mat;
+}
+
+.desc {
+  grid-area: desc;
+}
