@@ -51,6 +51,29 @@ function startMatrix() {
   canvas.height = ch * dpr;
   ctx.scale(dpr, dpr);
 
+  // Refresh the canvas when the page is resized so the matrix text doesn't stretch.
+  // Re-reads the CSS size, resizes the internal buffer, rescales the context, and
+  // redistributes the falling characters to fit the new width.
+  function onResize() {
+    cw = parseFloat(window.getComputedStyle(canvas).width);
+    ch = parseFloat(window.getComputedStyle(canvas).height);
+
+    canvas.width = cw * dpr;
+    canvas.height = ch * dpr;
+
+    // Canvas resize resets the transform to identity; re-apply the dpr scale.
+    ctx.scale(dpr, dpr);
+
+    // Redistribute characters for the new width
+    maxColums = cw / fontSize;
+    fallingCharArr = [];
+    for (var i = 0; i < maxColums; i++) {
+      fallingCharArr.push(new Point(i * fontSize, randomFloat(-500, 0)));
+    }
+  }
+
+  window.addEventListener('resize', onResize);
+
 
   // Returns a random integer between min (inclusive) and max (exclusive)
   function randomInt( min, max ) {

@@ -18,6 +18,7 @@ $highlight-spacing: 2.4px;
 $highlight-off: 20px;
 
 $container-padding: 5px 16px;
+$container-margin: 4px;
 $border-config: 2.4px solid $color-bg-dark;
 
 /* Elements */
@@ -36,7 +37,8 @@ body {
 
     font-family: monospace;
 
-    width: 25vw;
+    width: 100vw;
+    max-width: 800px;
     height: 100vh;
 
 }
