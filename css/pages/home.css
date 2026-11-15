@@ -111,6 +111,13 @@ hr {
   color: #FAF7F0;
 }
 
+.url {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 4px 0;
+}
+
 /* Links */
 a {
   background-color: #FAF7F0;
@@ -118,12 +125,6 @@ a {
   padding: 2px 3.2px;
   font-size: 13px;
   font-weight: 525;
-}
-
-#url {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 #banner {

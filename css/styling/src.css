@@ -111,6 +111,13 @@ hr {
   color: #FAF7F0;
 }
 
+.url {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 4px 0;
+}
+
 /* Links */
 a {
   background-color: #FAF7F0;
