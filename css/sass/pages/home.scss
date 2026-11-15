@@ -7,6 +7,7 @@
 
     /* Give the banner a definite size so #canvas can fill it with %/flex. */
     width: 100%;
+    min-height: 175px;
     height: 20vh;
     max-height: 250px;
 
